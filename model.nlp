@@ -1,0 +1,767 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "a,book,do,how,i,luggag,pickup": {
+            "intent": "luggage.pickup",
+            "domain": "default"
+          },
+          "about,luggag,me,pickup,servic,tell,the": {
+            "intent": "luggage.pickup",
+            "domain": "default"
+          },
+          "e-commerc,is,platform,the,what": {
+            "intent": "ecommerce.description",
+            "domain": "default"
+          },
+          "buy,can,how,i,thing,use,vacvault": {
+            "intent": "ecommerce.description",
+            "domain": "default"
+          },
+          "data,is,my,safe,vacvault,with": {
+            "intent": "security.privacy",
+            "domain": "default"
+          },
+          "data,doe,how,my,protect,vacvault": {
+            "intent": "security.privacy",
+            "domain": "default"
+          },
+          "access,doe,ensur,how,vacvault": {
+            "intent": "accessibility.inclusivity",
+            "domain": "default"
+          },
+          "access,doe,featur,have,vacvault,what": {
+            "intent": "accessibility.inclusivity",
+            "domain": "default"
+          },
+          "about,initi,me,sustain,tell,vacvault’": {
+            "intent": "sustainability.initiatives",
+            "domain": "default"
+          },
+          "eco-friend,how,is,vacvault": {
+            "intent": "sustainability.initiatives",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "luggage.pickup": "default",
+          "ecommerce.description": "default",
+          "security.privacy": "default",
+          "accessibility.inclusivity": "default",
+          "sustainability.initiatives": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "How do I book a luggage pickup?",
+            "intent": "luggage.pickup"
+          },
+          {
+            "domain": "default",
+            "utterance": "Tell me about the luggage pickup service",
+            "intent": "luggage.pickup"
+          },
+          {
+            "domain": "default",
+            "utterance": "What is the E-Commerce platform?",
+            "intent": "ecommerce.description"
+          },
+          {
+            "domain": "default",
+            "utterance": "How can I buy things using VacVault?",
+            "intent": "ecommerce.description"
+          },
+          {
+            "domain": "default",
+            "utterance": "Is my data safe with VacVault?",
+            "intent": "security.privacy"
+          },
+          {
+            "domain": "default",
+            "utterance": "How does VacVault protect my data?",
+            "intent": "security.privacy"
+          },
+          {
+            "domain": "default",
+            "utterance": "How does VacVault ensure accessibility?",
+            "intent": "accessibility.inclusivity"
+          },
+          {
+            "domain": "default",
+            "utterance": "What accessibility features does VacVault have?",
+            "intent": "accessibility.inclusivity"
+          },
+          {
+            "domain": "default",
+            "utterance": "Tell me about VacVault’s sustainability initiatives",
+            "intent": "sustainability.initiatives"
+          },
+          {
+            "domain": "default",
+            "utterance": "How is VacVault eco-friendly?",
+            "intent": "sustainability.initiatives"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "how": 1,
+              "do": 1,
+              "i": 1,
+              "book": 1,
+              "a": 1,
+              "luggag": 1,
+              "pickup": 1,
+              "tell": 1,
+              "me": 1,
+              "about": 1,
+              "the": 1,
+              "servic": 1,
+              "what": 1,
+              "is": 1,
+              "e-commerc": 1,
+              "platform": 1,
+              "can": 1,
+              "buy": 1,
+              "thing": 1,
+              "use": 1,
+              "vacvault": 1,
+              "my": 1,
+              "data": 1,
+              "safe": 1,
+              "with": 1,
+              "doe": 1,
+              "protect": 1,
+              "ensur": 1,
+              "access": 1,
+              "featur": 1,
+              "have": 1,
+              "vacvault’": 1,
+              "sustain": 1,
+              "initi": 1,
+              "eco-friend": 1
+            },
+            "intents": {
+              "luggage.pickup": 1,
+              "ecommerce.description": 1,
+              "security.privacy": 1,
+              "accessibility.inclusivity": 1,
+              "sustainability.initiatives": 1
+            },
+            "intentFeatures": {
+              "luggage.pickup": {
+                "how": 1,
+                "do": 1,
+                "i": 1,
+                "book": 1,
+                "a": 1,
+                "luggag": 1,
+                "pickup": 1,
+                "tell": 1,
+                "me": 1,
+                "about": 1,
+                "the": 1,
+                "servic": 1
+              },
+              "ecommerce.description": {
+                "what": 1,
+                "is": 1,
+                "the": 1,
+                "e-commerc": 1,
+                "platform": 1,
+                "how": 1,
+                "can": 1,
+                "i": 1,
+                "buy": 1,
+                "thing": 1,
+                "use": 1,
+                "vacvault": 1
+              },
+              "security.privacy": {
+                "is": 1,
+                "my": 1,
+                "data": 1,
+                "safe": 1,
+                "with": 1,
+                "vacvault": 1,
+                "how": 1,
+                "doe": 1,
+                "protect": 1
+              },
+              "accessibility.inclusivity": {
+                "how": 1,
+                "doe": 1,
+                "vacvault": 1,
+                "ensur": 1,
+                "access": 1,
+                "what": 1,
+                "featur": 1,
+                "have": 1
+              },
+              "sustainability.initiatives": {
+                "tell": 1,
+                "me": 1,
+                "about": 1,
+                "vacvault’": 1,
+                "sustain": 1,
+                "initi": 1,
+                "how": 1,
+                "is": 1,
+                "vacvault": 1,
+                "eco-friend": 1
+              }
+            },
+            "featuresToIntent": {
+              "how": [
+                "luggage.pickup",
+                "ecommerce.description",
+                "security.privacy",
+                "accessibility.inclusivity",
+                "sustainability.initiatives"
+              ],
+              "do": [
+                "luggage.pickup"
+              ],
+              "i": [
+                "luggage.pickup",
+                "ecommerce.description"
+              ],
+              "book": [
+                "luggage.pickup"
+              ],
+              "a": [
+                "luggage.pickup"
+              ],
+              "luggag": [
+                "luggage.pickup"
+              ],
+              "pickup": [
+                "luggage.pickup"
+              ],
+              "tell": [
+                "luggage.pickup",
+                "sustainability.initiatives"
+              ],
+              "me": [
+                "luggage.pickup",
+                "sustainability.initiatives"
+              ],
+              "about": [
+                "luggage.pickup",
+                "sustainability.initiatives"
+              ],
+              "the": [
+                "luggage.pickup",
+                "ecommerce.description"
+              ],
+              "servic": [
+                "luggage.pickup"
+              ],
+              "what": [
+                "ecommerce.description",
+                "accessibility.inclusivity"
+              ],
+              "is": [
+                "ecommerce.description",
+                "security.privacy",
+                "sustainability.initiatives"
+              ],
+              "e-commerc": [
+                "ecommerce.description"
+              ],
+              "platform": [
+                "ecommerce.description"
+              ],
+              "can": [
+                "ecommerce.description"
+              ],
+              "buy": [
+                "ecommerce.description"
+              ],
+              "thing": [
+                "ecommerce.description"
+              ],
+              "use": [
+                "ecommerce.description"
+              ],
+              "vacvault": [
+                "ecommerce.description",
+                "security.privacy",
+                "accessibility.inclusivity",
+                "sustainability.initiatives"
+              ],
+              "my": [
+                "security.privacy"
+              ],
+              "data": [
+                "security.privacy"
+              ],
+              "safe": [
+                "security.privacy"
+              ],
+              "with": [
+                "security.privacy"
+              ],
+              "doe": [
+                "security.privacy",
+                "accessibility.inclusivity"
+              ],
+              "protect": [
+                "security.privacy"
+              ],
+              "ensur": [
+                "accessibility.inclusivity"
+              ],
+              "access": [
+                "accessibility.inclusivity"
+              ],
+              "featur": [
+                "accessibility.inclusivity"
+              ],
+              "have": [
+                "accessibility.inclusivity"
+              ],
+              "vacvault’": [
+                "sustainability.initiatives"
+              ],
+              "sustain": [
+                "sustainability.initiatives"
+              ],
+              "initi": [
+                "sustainability.initiatives"
+              ],
+              "eco-friend": [
+                "sustainability.initiatives"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "how",
+                "do",
+                "i",
+                "book",
+                "a",
+                "luggag",
+                "pickup",
+                "tell",
+                "me",
+                "about",
+                "the",
+                "servic",
+                "what",
+                "is",
+                "e-commerc",
+                "platform",
+                "can",
+                "buy",
+                "thing",
+                "use",
+                "vacvault",
+                "my",
+                "data",
+                "safe",
+                "with",
+                "doe",
+                "protect",
+                "ensur",
+                "access",
+                "featur",
+                "have",
+                "vacvault’",
+                "sustain",
+                "initi",
+                "eco-friend"
+              ],
+              "intents": [
+                "luggage.pickup",
+                "ecommerce.description",
+                "security.privacy",
+                "accessibility.inclusivity",
+                "sustainability.initiatives"
+              ],
+              "perceptrons": [
+                [
+                  0.6322374939918518,
+                  1.5780671834945679,
+                  1.0784380435943604,
+                  1.5780671834945679,
+                  1.5780671834945679,
+                  3.6636996269226074,
+                  3.6636996269226074,
+                  0.9450283646583557,
+                  0.9450283646583557,
+                  0.9450283646583557,
+                  1.5731608867645264,
+                  2.0841128826141357,
+                  -0.5017195343971252,
+                  -0.6461429595947266,
+                  -0.4802902936935425,
+                  -0.4802902936935425,
+                  -0.4267480969429016,
+                  -0.4267480969429016,
+                  -0.4267480969429016,
+                  -0.4267480969429016,
+                  -1.0020684003829956,
+                  -0.1962786763906479,
+                  -0.1962786763906479,
+                  -0.04621420055627823,
+                  -0.04621420055627823,
+                  -0.3503251373767853,
+                  -0.1266954243183136,
+                  -0.1527073234319687,
+                  -0.17342302203178406,
+                  -0.010475028306245804,
+                  -0.010475028306245804,
+                  -1.1167343854904175,
+                  -1.1167343854904175,
+                  -1.1167343854904175,
+                  -0.05959099158644676,
+                  0.4864280357251674
+                ],
+                [
+                  -0.07606101036071777,
+                  -0.5731311440467834,
+                  2.281179428100586,
+                  -0.5731311440467834,
+                  -0.5731311440467834,
+                  -0.9896363019943237,
+                  -0.9896363019943237,
+                  -0.483950674533844,
+                  -0.483950674533844,
+                  -0.483950674533844,
+                  2.9243154525756836,
+                  -0.3340359032154083,
+                  2.739673614501953,
+                  1.2501039505004883,
+                  3.2843375205993652,
+                  3.2843375205993652,
+                  2.9364821910858154,
+                  2.9364821910858154,
+                  2.9364821910858154,
+                  2.9364821910858154,
+                  -0.48027968406677246,
+                  -0.8331875205039978,
+                  -0.8331875205039978,
+                  -0.45350319147109985,
+                  -0.45350319147109985,
+                  -1.3444716930389404,
+                  -0.2893829047679901,
+                  -0.40685901045799255,
+                  -0.9729702472686768,
+                  -0.5041717886924744,
+                  -0.5041717886924744,
+                  -0.12251102179288864,
+                  -0.12251102179288864,
+                  -0.12251102179288864,
+                  -1.515341877937317,
+                  0.8187044377442979
+                ],
+                [
+                  -0.24104554951190948,
+                  -0.10431421548128128,
+                  -0.5227296352386475,
+                  -0.10431421548128128,
+                  -0.10431421548128128,
+                  -0.15084140002727509,
+                  -0.15084140002727509,
+                  -0.11150310188531876,
+                  -0.11150310188531876,
+                  -0.11150310188531876,
+                  -0.16135789453983307,
+                  -0.010646621696650982,
+                  -0.7105810046195984,
+                  0.18986110389232635,
+                  -0.14585784077644348,
+                  -0.14585784077644348,
+                  -0.3623918890953064,
+                  -0.3623918890953064,
+                  -0.3623918890953064,
+                  -0.3623918890953064,
+                  1.1267682313919067,
+                  4.547709941864014,
+                  4.547709941864014,
+                  1.7786450386047363,
+                  1.7786450386047363,
+                  1.186604619026184,
+                  2.76918625831604,
+                  -0.9511079788208008,
+                  -1.542069435119629,
+                  -0.48214125633239746,
+                  -0.48214125633239746,
+                  -0.09216953814029694,
+                  -0.09216953814029694,
+                  -0.09216953814029694,
+                  -1.4137696027755737,
+                  0.33738016267461657
+                ],
+                [
+                  0.2940225601196289,
+                  -0.10648586601018906,
+                  -0.6343689560890198,
+                  -0.10648586601018906,
+                  -0.10648586601018906,
+                  -0.1694469004869461,
+                  -0.1694469004869461,
+                  -0.1693367063999176,
+                  -0.1693367063999176,
+                  -0.1693367063999176,
+                  -0.37167030572891235,
+                  -0.03642754256725311,
+                  1.1249589920043945,
+                  -1.4486092329025269,
+                  -0.3152933418750763,
+                  -0.3152933418750763,
+                  -0.48979243636131287,
+                  -0.48979243636131287,
+                  -0.48979243636131287,
+                  -0.48979243636131287,
+                  1.616126298904419,
+                  -1.9463815689086914,
+                  -1.9463815689086914,
+                  -0.21401768922805786,
+                  -0.21401768922805786,
+                  3.26232647895813,
+                  -1.669638752937317,
+                  3.4484355449676514,
+                  4.942190170288086,
+                  1.4729114770889282,
+                  1.4729114770889282,
+                  -0.10732372850179672,
+                  -0.10732372850179672,
+                  -0.10732372850179672,
+                  -0.823783814907074,
+                  0.46476165766861455
+                ],
+                [
+                  2.4639010429382324,
+                  -0.24370883405208588,
+                  -1.2357479333877563,
+                  -0.24370883405208588,
+                  -0.24370883405208588,
+                  -1.4868355989456177,
+                  -1.4868355989456177,
+                  1.5863345861434937,
+                  1.5863345861434937,
+                  1.5863345861434937,
+                  -2.0331218242645264,
+                  -1.1528902053833008,
+                  -0.8362799286842346,
+                  3.5134410858154297,
+                  -0.7666279673576355,
+                  -0.7666279673576355,
+                  -0.9017778038978577,
+                  -0.9017778038978577,
+                  -0.9017778038978577,
+                  -0.9017778038978577,
+                  1.4666670560836792,
+                  -1.6891508102416992,
+                  -1.6891508102416992,
+                  -1.2491352558135986,
+                  -1.2491352558135986,
+                  -1.8928436040878296,
+                  -0.4004232883453369,
+                  -1.383267879486084,
+                  -1.4529225826263428,
+                  -0.04604579508304596,
+                  -0.04604579508304596,
+                  2.8521196842193604,
+                  2.8521196842193604,
+                  2.8521196842193604,
+                  5.518557548522949,
+                  0.9757145259716932
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "How do I book a luggage pickup?"
+      ],
+      [
+        "en",
+        "Tell me about the luggage pickup service"
+      ],
+      [
+        "en",
+        "What is the E-Commerce platform?"
+      ],
+      [
+        "en",
+        "How can I buy things using VacVault?"
+      ],
+      [
+        "en",
+        "Is my data safe with VacVault?"
+      ],
+      [
+        "en",
+        "How does VacVault protect my data?"
+      ],
+      [
+        "en",
+        "How does VacVault ensure accessibility?"
+      ],
+      [
+        "en",
+        "What accessibility features does VacVault have?"
+      ],
+      [
+        "en",
+        "Tell me about VacVault’s sustainability initiatives"
+      ],
+      [
+        "en",
+        "How is VacVault eco-friendly?"
+      ],
+      [
+        "en",
+        "How do I book a luggage pickup?"
+      ],
+      [
+        "en",
+        "Tell me about the luggage pickup service"
+      ],
+      [
+        "en",
+        "What is the E-Commerce platform?"
+      ],
+      [
+        "en",
+        "How can I buy things using VacVault?"
+      ],
+      [
+        "en",
+        "Is my data safe with VacVault?"
+      ],
+      [
+        "en",
+        "How does VacVault protect my data?"
+      ],
+      [
+        "en",
+        "How does VacVault ensure accessibility?"
+      ],
+      [
+        "en",
+        "What accessibility features does VacVault have?"
+      ],
+      [
+        "en",
+        "Tell me about VacVault’s sustainability initiatives"
+      ],
+      [
+        "en",
+        "How is VacVault eco-friendly?"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "luggage.pickup": [
+          {
+            "answer": "You can book a luggage pickup through the VacVault app by selecting a convenient time and location."
+          }
+        ],
+        "ecommerce.description": [
+          {
+            "answer": "The VacVault E-Commerce Platform allows you to purchase essential items tailored to student needs. You can browse, add items to your cart, and securely check out."
+          }
+        ],
+        "security.privacy": [
+          {
+            "answer": "VacVault prioritizes your data security with encryption protocols and strict privacy policies."
+          }
+        ],
+        "accessibility.inclusivity": [
+          {
+            "answer": "VacVault adheres to WCAG standards, ensuring accessibility for all students including those with disabilities."
+          }
+        ],
+        "sustainability.initiatives": [
+          {
+            "answer": "VacVault uses eco-friendly packaging and optimizes logistics to reduce carbon footprint."
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
